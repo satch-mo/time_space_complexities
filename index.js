@@ -12,10 +12,10 @@ function printNumbers(numbers) {
 }
 
 // Q: Given an array of numbers, what is the time complexity of this function?
-// ANSWER: O(n) - linear
+// ANSWER: O(n) - linear time
 
 // Q: What is the space complexity?
-// ANSWER: O(1) - constant
+// ANSWER: O(1) - constant space
 
 // 2) -------------------------------------------------------
 // You are challenged to find the 4th element of an array, and you came up with this solution:
@@ -35,13 +35,13 @@ function findFourth(numbers) {
 }
 
 // Q: What is the time complexity of of this solution?
-// ANSWER: O(1)
+// ANSWER: O(n) = linear time
 
 // Q: Given an array of numbers, what is the space complexity of this function?
-// ANSWER: O(1)
+// ANSWER: O(1) == constant space
 
 // Q: Could you come up with a solution that has a better time complexity? If so, write out that solution and note the time complexity. If not, why not?
-// ANSWER: No because O(1) is the least complex. The for loop stops when count is equal to 4. Runtime complexity will be constant.
+// ANSWER: Call numbers[3] = O(1)
 
 // 3) -------------------------------------------------------
 function printA() {
@@ -70,16 +70,20 @@ function printB(number) {
 // 5) -------------------------------------------------------
 function printC(num, arr) {
   for (let i = 0; i < num; i++) {
+    // O(n)
     for (let j = 0; j < arr.length; j++) {
-      console.log(j);
+      // O(n)
+      console.log(j); // O(1)
     }
   }
 }
+// O(n) * O(n) * O(1) == n * 1n == 1n^2 == 0(n^2)
+
 // Q: What is the time complexity of this function?
 // ANSWER: O(n^2)
 
 // Q: What is the space complexity of this function?
-// ANSWER: O(1)
+// ANSWER: O(1)  bc not returning anything, not creating anything new, so therefore not increasing the complexity
 
 // 6) -------------------------------------------------------
 function nested(numbers) {
